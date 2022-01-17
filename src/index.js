@@ -3,10 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { createStore } from 'redux';
 
+import { Provider } from 'react-redux'
+const initialState = {cart: [] }
+function Reducer(state = initialState, actions) {
+  switch (actions.type) {
+    case 'addcart':
+      return { cart: [...state.cart, actions.payload] }
+    case 'addquantity':
+      return { cart: actions.payload }
+      case 'getcart':
+      return { cart: actions.payload }
+    
+    default:
+      return state;
+  }
+
+
+}
+const store = createStore(Reducer)
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

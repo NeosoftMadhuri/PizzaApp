@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Index from './Components/Index'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import Signup from './Components/Signup';
+import Login from './Components/Login';
+import Home from './Components/Home';
+import PageNotFound from './Components/PageNotFound';
+import Profile from './Components/Profile';
+import Registration from './Components/Registration';
+import Dashboard from './Components/Dashboard';
+import ShippingCart from './Components/ShippingCart';
+import order from './Components/order';
+import Allorder from './Components/Allorder';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <Index/>
+      <Registration/> */}
+      {/* <Dashboard/> */}
+      <Router>
+          <Switch>
+              <Route path="/" exact component={Index}/>
+              <Route path="/register" component={Signup}/>
+              <Route path="/login" component={Login}/>
+              <Route path="/home" component={Home}/>
+              <Route path="/profile" component={Profile}/>
+              <Route path="/shoppingcart" component={ShippingCart}/>
+              <Route path="/order" component={order}/>
+              <Route path="/allorder" component={Allorder}/>
+              <Route path="/*" component={PageNotFound}/>
+          </Switch>
+      </Router>
+    </>
   );
 }
 

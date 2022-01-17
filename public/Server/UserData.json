@@ -1,0 +1,26 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "email": "madhuri@gmail.com",
+      "pass": "Madhu@123",
+      "uname": "Madhuriambole",
+      "mobile": 8989898989
+    },
+    {
+      "id": 2,
+      "email": "madhuri1@gmail.com",
+      "pass": "Madhu@123",
+      "uname": "Madhuri",
+      "mobile": 7898789878
+    },
+    {
+      "email": "mahesh@gmail.com",
+      "fname": "Mahesh",
+      "lname": "Ambole",
+      "pass": "Mahesh@123",
+      "saddress": "Sangli",
+      "id": 3
+    }
+  ]
+}

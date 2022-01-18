@@ -28,7 +28,7 @@ function App() {
               <Route path="/shoppingcart" component={ShippingCart}/>
               <Route path="/order" component={order}/>
               <Route path="/allorder" component={Allorder}/>
-              <Route path="/*" component={PageNotFound}/>
+              {/* <Route path="/*" component={PageNotFound}/> */}
           </Switch>
       </Router>
     </>
